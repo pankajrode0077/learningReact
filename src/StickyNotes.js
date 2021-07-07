@@ -11,7 +11,7 @@ function StickyNotes(props) {
                                 width="250px"
                                 src={stickyNotes}>
                             </img>
-                        </div> : <div>Sticky Notes</div>
+                        </div> : <p>Sticky Notes</p>
                 }
             </>);
 }

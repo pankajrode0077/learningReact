@@ -11,7 +11,7 @@ function Weather(props) {
                                 width="300px"
                                 src={weather}>
                             </img>
-                        </div> : <div>Weather widget</div>
+                        </div> : <p>Weather widget</p>
                 }
             </>);
 }
