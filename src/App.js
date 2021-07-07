@@ -24,6 +24,8 @@ function App() {
   const [sidemenu, setSideMenu] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
   const [stickyNotes, setStickyNotes] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
   const [weather, setWeather] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
+
+  const [step, setStep] = useState(0);
   // const [xyz, setxyz] = useState({pos:{ x: 0, y: 0 },exp:false}); add for your com change loginand setlogin
 const updateView = (lbl)=>{
   switch (lbl) {
@@ -86,7 +88,9 @@ const updateView = (lbl)=>{
 
   return (
     <>
-    <div className="App">
+    {
+      step === 0 ? 
+      <div className="App">
      <button className="addScreen" onClick={()=>setScreen(screen+1)}>Add New Screen</button>
      <div className="vl"></div>
      {screen > 0 && <div className="v2"></div>}
@@ -199,9 +203,12 @@ const updateView = (lbl)=>{
       </Draggable>
       </div>  
       <button className="export">Export Package</button>
+        <button className="flow1" onClick={()=>setStep(1)}>Start Login Flow</button>
     </div>
-    <div>
-    </div>
+      : <DemoComp1 />
+    
+    }
+
     </>
   );
 }

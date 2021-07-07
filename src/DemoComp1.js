@@ -3,7 +3,7 @@ import "./App.css";
 
 
 function DemoComp1() {
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState(1);
     return (<>
         {
             step === 1 ?
@@ -48,7 +48,7 @@ function DemoComp1() {
             </div>
             
             
-            : <button onClick={()=>setStep(1)}>Start Login Flow</button>     
+            : ""     
             
         }
             </>);

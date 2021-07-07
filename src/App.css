@@ -120,6 +120,15 @@ button:hover {
   background-color:aliceblue;
 }
 
+.flow1{
+  z-index: 5;
+  position:fixed;
+  top:12%;
+  right:5%;
+  width:20%;
+  background-color:aliceblue;
+}
+
 .home-navbar {
   height: 40px;
   width: auto;
