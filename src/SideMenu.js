@@ -8,9 +8,9 @@ function SideMenu(props) {
     return (<>
     {props.expanded ?
                 <div className="App">
-                    <img alt="loading" className='imageSize' src={SideMenuImg}></img>
+                    <img alt="loading" className="side-menu" src={SideMenuImg}></img>
                 </div> :
-            <div>Side Menu</div>
+            <p>Side Menu</p>
         }
     </>
     );

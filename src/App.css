@@ -126,16 +126,16 @@ button:hover {
 }
 
 .agent-status {
-  height: 40px;
-  width: 180px;
+  height: 45px;
+  width: 55%;
 }
 
 .side-menu {
-  height: 460px;
-  width: 40px;
+  height: 450px;
+  width: 3%;
 }
 
 .imageSize {
-  height:"450px";
-  width:"22%"
+  height: 450px;
+  width:22%;
 }

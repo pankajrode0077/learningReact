@@ -8,9 +8,9 @@ function AgentStatus(props) {
     return (<>
     {props.expanded ?
                 <div className="App">
-                    <img alt="loading" className='imageSize' src={AgentStatusImg}></img>
+                    <img alt="loading" className="agent-status" src={AgentStatusImg}></img>
                 </div> :
-            <div>Agent Status</div>
+            <p>Agent Status</p>
         }
     </>
     );

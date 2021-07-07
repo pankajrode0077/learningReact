@@ -8,9 +8,9 @@ function Navbar(props) {
     return (<>
     {props.expanded ?
                 <div className="App">
-                    <img alt="loading" className='imageSize' src={TopNavBarImg}></img>
+                    <img alt="loading" className="home-navbar" src={TopNavBarImg}></img>
                 </div> :
-            <div>Navbar</div>
+            <p>Navbar</p>
         }
     </>
     );
