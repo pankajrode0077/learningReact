@@ -167,6 +167,7 @@ const updateView = (lbl)=>{
         <Dialpad expanded={dialpad.exp}></Dialpad>
         </div>
       </Draggable>  
+      {stickyNotes.disp && <p>Sticky Notes </p>}
       <Draggable
         key="6"
         defaultPosition={stickyNotes.pos}
@@ -181,6 +182,7 @@ const updateView = (lbl)=>{
         <StickyNotes expanded={stickyNotes.exp}></StickyNotes>
         </div>
       </Draggable>
+      {weather.disp && <p>Weather Widget</p>}
       <Draggable
         key="7"
         defaultPosition={weather.pos}
