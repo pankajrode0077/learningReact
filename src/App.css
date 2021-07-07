@@ -120,3 +120,8 @@ button:hover {
   width:20%;
   background-color:aliceblue;
 }
+
+.imageSize {
+  height:"450px";
+  width:"22%"
+}

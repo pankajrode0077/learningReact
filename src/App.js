@@ -3,6 +3,7 @@ import "./App.css";
 import Draggable from "react-draggable";
 import { v4 as uuidv4 } from "uuid";
 import Login from './Login';
+import Dialpad from './dialpad/Dialpad';
 //add import for new comp
 
 var randomColor = require("randomcolor");
@@ -10,12 +11,16 @@ var randomColor = require("randomcolor");
 function App() {
   const [login, setLogin] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
   const [screen,setScreen] = useState(0);
+  const [dialpad, setDialpad] = useState({pos:{ x: 0, y: 0 },exp:false, disp:false});
   // const [xyz, setxyz] = useState({pos:{ x: 0, y: 0 },exp:false}); add for your com change loginand setlogin
 const updateView = (lbl)=>{
   switch (lbl) {
     case "login":
       setLogin({ ...login, disp: true });
       break;
+    case "dialpad":
+      setDialpad({ ...dialpad, disp: true });
+        break;  
       default:
         break;
   }
@@ -27,6 +32,9 @@ const updateView = (lbl)=>{
         case "login":
           setLogin({pos:{ x: data.x, y: data.y },exp:true,disp: true});
           break;
+          case "dialpad":
+            setDialpad({pos:{ x: data.x, y: data.y },exp:true,disp: true});
+            break;
           default:
           console.log('TBD');
             break;
@@ -53,11 +61,25 @@ const updateView = (lbl)=>{
           updateView('login');
         }}
       >
-        <p>
+        <div>
         <Login expanded={login.exp}></Login>
-        </p>
+        </div>
       </Draggable>
-  
+      {dialpad.disp && <p>DialPad </p>}
+      <Draggable
+        key="2"
+        defaultPosition={dialpad.pos}
+        onStop={(e, data) => {
+          updatePos(data, 1, { type: 'dialpad' });
+        }}
+        onStart={()=>{
+          updateView('dialpad');
+        }}
+      >
+        <div>
+        <Dialpad expanded={dialpad.exp}></Dialpad>
+        </div>
+      </Draggable>  
       </div>  
       <button className="export">Export Package</button>
     </div>
