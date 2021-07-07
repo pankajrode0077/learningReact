@@ -165,12 +165,17 @@ button:hover {
 }
 
 .loginBtn button{
-  padding-left: 50px;
+  padding: 4px;
+  background-color: #007cbe;
+  color: #ffff;
+  font-size: 13px;
+  width: 100%;
+  border-radius: 4px;
 }
 
 .loginBtn  a{
-  padding-left:50px
-    }
+  font-size: 12px;
+}
 
 .login{
     display: block;
@@ -183,14 +188,29 @@ button:hover {
     height: 450px;
     background-color:dodgerblue;
 }
+
 .ipTxt{
-  color:grey;
-  font-size:1rem;
+  color:#000;
+  font-size:17px;
   max-height:10px;
+}
+
+.ipInput{
+  border: 1px solid;
+  color: grey;
+  font-size: 14px;
+  font-style: italic;
 } 
 
+.outerLogin {
+  padding:40px;
+  background-color: #298fd8;
+}
+
 .innerLogin{  
-  padding-top:200px;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 0px 4px 1px #000;
 }
 
 .limitWidth{
@@ -199,4 +219,15 @@ button:hover {
 
 .paddingleft{
   padding-left:100px;
+}
+
+.incontact-img {
+  height: 30px;
+  width: 140px;
+}
+
+.cxone-img {
+  height: 30px;
+  width: 60px;
+  margin-left: 10px;
 }
