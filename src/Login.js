@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Login1 from "./assets/login/Login1.png";
 
 function Login(props) {
     const [step, setStep] = useState(0);

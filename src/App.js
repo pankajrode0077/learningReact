@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Draggable from "react-draggable";
@@ -7,6 +8,9 @@ import Dialpad from './dialpad/Dialpad';
 import Navbar from "./Navbar";
 import AgentStatus from "./AgentStatus";
 import SideMenu from "./SideMenu";
+import StickyNotes from "./StickyNotes";
+import Weather from "./Weather";
+import DemoComp1 from "./DemoComp1";
 //add import for new comp
 
 var randomColor = require("randomcolor");
@@ -18,6 +22,8 @@ function App() {
   const [navbar, setNavbar] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
   const [agentstatus, setAgentStatus] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
   const [sidemenu, setSideMenu] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
+  const [stickyNotes, setStickyNotes] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
+  const [weather, setWeather] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
   // const [xyz, setxyz] = useState({pos:{ x: 0, y: 0 },exp:false}); add for your com change loginand setlogin
 const updateView = (lbl)=>{
   switch (lbl) {
@@ -35,7 +41,13 @@ const updateView = (lbl)=>{
       break;
     case "dialpad":
       setDialpad({ ...dialpad, disp: true });
+      break;
+    case "stickyNotes":
+      setStickyNotes({ ...stickyNotes, disp: true });
       break;  
+    case "weather":
+      setWeather({ ...weather, disp: true });
+      break;
     default:
       break;
   }
@@ -59,6 +71,12 @@ const updateView = (lbl)=>{
         case "dialpad":
           setDialpad({pos:{ x: data.x, y: data.y },exp:true,disp: true});
           break;
+        case "stickyNotes":
+          setStickyNotes({pos:{ x: data.x, y: data.y },exp:true,disp: true});
+          break;
+        case "weather":
+          setWeather({pos:{ x: data.x, y: data.y },exp:true,disp: true});
+          break;
         default:
           console.log('TBD');
           break;
@@ -67,6 +85,7 @@ const updateView = (lbl)=>{
   };
 
   return (
+    <>
     <div className="App">
      <button className="addScreen" onClick={()=>setScreen(screen+1)}>Add New Screen</button>
      <div className="vl"></div>
@@ -148,9 +167,40 @@ const updateView = (lbl)=>{
         <Dialpad expanded={dialpad.exp}></Dialpad>
         </div>
       </Draggable>  
+      <Draggable
+        key="6"
+        defaultPosition={stickyNotes.pos}
+        onStop={(e, data) => {
+          updatePos(data, 1, { type: 'stickyNotes' });
+        }}
+        onStart={()=>{
+          updateView('stickyNotes');
+        }}
+      >
+        <div>
+        <StickyNotes expanded={stickyNotes.exp}></StickyNotes>
+        </div>
+      </Draggable>
+      <Draggable
+        key="7"
+        defaultPosition={weather.pos}
+        onStop={(e, data) => {
+          updatePos(data, 1, { type: 'weather' });
+        }}
+        onStart={()=>{
+          updateView('weather');
+        }}
+      >
+        <div>
+        <Weather expanded={weather.exp}></Weather>
+        </div>
+      </Draggable>
       </div>  
       <button className="export">Export Package</button>
     </div>
+    <div>
+    </div>
+    </>
   );
 }
 
