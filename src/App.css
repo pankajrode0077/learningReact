@@ -129,6 +129,15 @@ button:hover {
   background-color:aliceblue;
 }
 
+.home-flow{
+  z-index: 5;
+  position:fixed;
+  top:21%;
+  right:5%;
+  width:20%;
+  background-color:aliceblue;
+}
+
 .home-navbar {
   height: 40px;
   width: auto;

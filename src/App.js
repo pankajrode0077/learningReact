@@ -11,6 +11,7 @@ import SideMenu from "./SideMenu";
 import StickyNotes from "./StickyNotes";
 import Weather from "./Weather";
 import DemoComp1 from "./DemoComp1";
+import DemoHomeComp from "./DemoHomeComp";
 //add import for new comp
 
 var randomColor = require("randomcolor");
@@ -88,7 +89,7 @@ const updateView = (lbl)=>{
 
   return (
     <>
-    {
+    { step === 0 ?
       <div className="App">
      <button className="addScreen" onClick={()=>setScreen(screen+1)}>Add New Screen</button>
      <div className="vl"></div>
@@ -201,10 +202,12 @@ const updateView = (lbl)=>{
         </div>
       </Draggable>
       <button className="export">Export Package</button>
-        <button className="flow1" onClick={()=>setStep(1)}>Start Login Flow</button>
-      </div>  
-      
+      <button className="flow1" onClick={()=>setStep(1)}>Start Login Flow</button>
+      <button className="home-flow" onClick={()=>setStep(2)}>Start Home Flow</button>
     </div>
+      </div>
+      : step === 1 ? <DemoComp1 /> : step === 2 ? <DemoHomeComp /> : ""
+    
     }
 
     </>
