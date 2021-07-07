@@ -6,12 +6,12 @@ function Login(props) {
     return (<>
         {props.expanded ?
             step === 0 ?
-                <div className="App">
+                <div >
                     <img alt="loading"
                         onClick={()=>setStep(1)}
-                        height="100px"
-                        width="100px"
-                        src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"></img>
+                        height="450px"
+                        width="22%"
+                        src={process.env.PUBLIC_URL +"/Login-1.jpg"}></img>
                 </div> :
                 step === 1 ?
                     <p onClick={()=>setStep(2)} >Load image with username</p> :

@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .box {
@@ -67,4 +67,56 @@ button:hover {
 
 #delete:hover {
   color: rgb(255, 55, 55);
+}
+
+.vl {
+  border-left: 6px solid white;
+  height: 100%;
+  z-index: 10;
+  left:15%;
+  position:fixed;
+}
+
+.v2 {
+  border-left: 6px solid white;
+  height: 100%;
+  z-index: 10;
+  left:45%;
+  position:fixed;
+}
+
+.v3 {
+  border-left: 6px solid white;
+  height: 100%;
+  z-index: 55;
+  left:75%;
+  position:fixed;
+}
+
+.sidenav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.addScreen{
+  z-index: 5;
+  position:fixed;
+  top:2%;
+}
+
+.export{
+  z-index: 5;
+  position:fixed;
+  top:5%;
+  right:5%;
+  width:20%;
+  background-color:aliceblue;
 }
