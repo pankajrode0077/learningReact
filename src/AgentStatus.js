@@ -7,7 +7,7 @@ function AgentStatus(props) {
 
     return (<>
     {props.expanded ?
-                <div className="App">
+                <div className="sidenavs">
                     <img alt="loading" className="agent-status" src={AgentStatusImg}></img>
                 </div> :
             <p>Agent Status</p>

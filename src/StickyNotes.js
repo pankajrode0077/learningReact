@@ -5,7 +5,7 @@ import stickyNotes from "./assets/stickyNotes/stickyNotes.png";
 function StickyNotes(props) {
     return (<>
                 {props.expanded ?
-                        <div className="App">
+                        <div className="sidenavs">
                             <img alt="sticky notes"
                                 height="200px"
                                 width="250px"

@@ -7,7 +7,7 @@ function Navbar(props) {
 
     return (<>
     {props.expanded ?
-                <div className="App">
+                <div className="sidenavs">
                     <img alt="loading" className="home-navbar" src={TopNavBarImg}></img>
                 </div> :
             <p>Navbar</p>

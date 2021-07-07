@@ -89,7 +89,6 @@ const updateView = (lbl)=>{
   return (
     <>
     {
-      step === 0 ? 
       <div className="App">
      <button className="addScreen" onClick={()=>setScreen(screen+1)}>Add New Screen</button>
      <div className="vl"></div>
@@ -201,12 +200,11 @@ const updateView = (lbl)=>{
         <Weather expanded={weather.exp}></Weather>
         </div>
       </Draggable>
-      </div>  
       <button className="export">Export Package</button>
         <button className="flow1" onClick={()=>setStep(1)}>Start Login Flow</button>
+      </div>  
+      
     </div>
-      : <DemoComp1 />
-    
     }
 
     </>

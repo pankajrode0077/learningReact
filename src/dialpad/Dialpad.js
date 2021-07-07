@@ -10,7 +10,7 @@ function Dialpad(props) {
     return (<>
         {props.expanded ?
             step === 0 ?
-                <div className="App">
+                <div className="sidenavs">
                     <img alt="loading" className='imageSize'
                         onClick={() => setStep(1)}
                         src={OBCall1}></img>

@@ -5,7 +5,7 @@ import weather from "./assets/weather/weather.png";
 function Weather(props) {
     return (<>
                 {props.expanded ?
-                        <div className="App">
+                        <div className="sidenavs">
                             <img alt="weather"
                                 height="150px"
                                 width="300px"
