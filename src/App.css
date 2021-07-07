@@ -98,11 +98,10 @@ button:hover {
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: 2;
   background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
   padding-top: 60px;
+  padding-left:10px;
 }
 
 .addScreen{
@@ -114,9 +113,9 @@ button:hover {
 .export{
   z-index: 5;
   position:fixed;
-  top:5%;
-  right:5%;
-  width:20%;
+  top:2%;
+  right:2%;
+  width:9%;
   background-color:aliceblue;
 }
 
@@ -155,16 +154,49 @@ button:hover {
 
 .imageSize {
   height: 450px;
-  width:22%;
+  width:250px;
 }
 
 .sidenavs {
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
   background-color: #111;
-  overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+}
+
+.loginBtn button{
+  padding-left: 50px;
+}
+
+.loginBtn  a{
+  padding-left:50px
+    }
+
+.login{
+    display: block;
+    background: #fff;
+    margin: 0 auto;
+    width: auto;
+    max-width: 480px;
+    min-width: 170px;
+    box-shadow: 0 11px 26px 5px rgb(31 50 77 / 30%);
+    height: 450px;
+    background-color:dodgerblue;
+}
+.ipTxt{
+  color:grey;
+  font-size:1rem;
+  max-height:10px;
+} 
+
+.innerLogin{  
+  padding-top:200px;
+}
+
+.limitWidth{
+  max-width: 250px;
+}
+
+.paddingleft{
+  padding-left:100px;
 }

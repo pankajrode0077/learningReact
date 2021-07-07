@@ -8,7 +8,8 @@ function SideMenu(props) {
     return (<>
     {props.expanded ?
                 <div className="sidenavs">
-                    <img alt="loading" className="side-menu" src={SideMenuImg}></img>
+                    <img alt="loading" height="450px"
+                        width="50px"  src={SideMenuImg}></img>
                 </div> :
             <p>Side Menu</p>
         }

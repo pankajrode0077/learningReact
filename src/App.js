@@ -92,13 +92,14 @@ const updateView = (lbl)=>{
     { step === 0 ?
       <div className="App">
      <button className="addScreen" onClick={()=>setScreen(screen+1)}>Add New Screen</button>
-     <div className="vl"></div>
-     {screen > 0 && <div className="v2"></div>}
-     {screen > 1 && <div className="v3"></div>}
+     <div className="vl"><label className="paddingleft">Screen 1</label></div>
+     {screen > 0 && <div className="v2"><label className="paddingleft">Screen 2</label></div>}
+     {screen > 1 && <div className="v3"><label className="paddingleft">Screen 3</label></div>}
       <div id="mySidenav" className="sidenav">
       {login.disp && <p>Login </p>}
       <Draggable
         key="1"
+        defaultClassName="limitWidth"
         defaultPosition={login.pos}
         onStop={(e, data) => {
           updatePos(data, 1, { type: 'login' });
@@ -114,6 +115,7 @@ const updateView = (lbl)=>{
       {navbar.disp && <p>NavBar </p>}
       <Draggable
         key="2"
+        defaultClassName="limitWidth"
         defaultPosition={navbar.pos}
         onStop={(e, data) => {
           updatePos(data, 1, { type: 'navbar' });
@@ -129,6 +131,7 @@ const updateView = (lbl)=>{
       {agentstatus.disp && <p>Agent Status </p>}
       <Draggable
         key="3"
+        defaultClassName="limitWidth"
         defaultPosition={agentstatus.pos}
         onStop={(e, data) => {
           updatePos(data, 1, { type: 'agentstatus' });
@@ -144,6 +147,7 @@ const updateView = (lbl)=>{
       {sidemenu.disp && <p>Side Menu </p>}
       <Draggable
         key="4"
+        defaultClassName="limitWidth"
         defaultPosition={sidemenu.pos}
         onStop={(e, data) => {
           updatePos(data, 1, { type: 'sidemenu' });
@@ -159,6 +163,7 @@ const updateView = (lbl)=>{
       {dialpad.disp && <p>DialPad </p>}
       <Draggable
         key="5"
+        defaultClassName="limitWidth"
         defaultPosition={dialpad.pos}
         onStop={(e, data) => {
           updatePos(data, 1, { type: 'dialpad' });
@@ -174,6 +179,7 @@ const updateView = (lbl)=>{
       {stickyNotes.disp && <p>Sticky Notes </p>}
       <Draggable
         key="6"
+        defaultClassName="limitWidth"
         defaultPosition={stickyNotes.pos}
         onStop={(e, data) => {
           updatePos(data, 1, { type: 'stickyNotes' });
@@ -186,9 +192,14 @@ const updateView = (lbl)=>{
         <StickyNotes expanded={stickyNotes.exp}></StickyNotes>
         </div>
       </Draggable>
+      <p>Digital </p>
+      <p>Email </p>
+      <p>SMS </p>
+      <p>Commitments </p>
       {weather.disp && <p>Weather Widget</p>}
       <Draggable
         key="7"
+        defaultClassName="limitWidth"
         defaultPosition={weather.pos}
         onStop={(e, data) => {
           updatePos(data, 1, { type: 'weather' });
@@ -201,9 +212,9 @@ const updateView = (lbl)=>{
         <Weather expanded={weather.exp}></Weather>
         </div>
       </Draggable>
-      <button className="export">Export Package</button>
-      <button className="flow1" onClick={()=>setStep(1)}>Start Login Flow</button>
-      <button className="home-flow" onClick={()=>setStep(2)}>Start Home Flow</button>
+      <button className="export">Export App</button>
+      {/* <button className="flow1" onClick={()=>setStep(1)}>Start Login Flow</button>
+      <button className="home-flow" onClick={()=>setStep(2)}>Start Home Flow</button> */}
     </div>
       </div>
       : step === 1 ? <DemoComp1 /> : step === 2 ? <DemoHomeComp /> : ""
