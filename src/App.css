@@ -121,6 +121,21 @@ button:hover {
   background-color:aliceblue;
 }
 
+.home-navbar {
+  height: 40px;
+  width: auto;
+}
+
+.agent-status {
+  height: 40px;
+  width: 180px;
+}
+
+.side-menu {
+  height: 460px;
+  width: 40px;
+}
+
 .imageSize {
   height:"450px";
   width:"22%"
