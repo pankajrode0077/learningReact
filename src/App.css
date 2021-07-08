@@ -202,6 +202,10 @@ button:hover {
   margin-top: 5px;
 }
 
+.loginBtn button:hover{
+  background-color: #298fd8;
+}
+
 .loginBtn  a{
   font-size: 12px;
 }
