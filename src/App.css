@@ -342,3 +342,29 @@ button:hover {
   max-width: 1px;
   max-height: 1px;
 }
+
+
+.loader-spinner {
+  position: absolute !important;
+  width: 100% !important;
+  max-width: 120px !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate( -50%, -50% ); /* center */
+  -webkit-animation: spinLoader 600ms steps(12, end) infinite;
+          animation: spinLoader 600ms steps(12, end) infinite;
+}
+
+ 
+
+@-webkit-keyframes spinLoader {
+  from { transform: translate( -50%, -50% ) rotate(0turn); }
+  to { transform: translate( -50%, -50% ) rotate(1turn); }
+}
+
+ 
+
+@keyframes spinLoader {
+  from { transform: translate( -50%, -50% ) rotate(0turn); }
+  to { transform: translate( -50%, -50% ) rotate(1turn); }
+}
