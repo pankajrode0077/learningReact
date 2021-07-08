@@ -16,6 +16,7 @@ import DemoHomeComp from "./DemoHomeComp";
 
 var randomColor = require("randomcolor");
 
+
 function App() {
   const [login, setLogin] = useState({pos:{ x: 0, y: 0 },exp:false , disp:false});
   const [screen,setScreen] = useState(0);
@@ -28,6 +29,10 @@ function App() {
 
   const [step, setStep] = useState(0);
   // const [xyz, setxyz] = useState({pos:{ x: 0, y: 0 },exp:false}); add for your com change loginand setlogin
+  let [state, setState] = useState(false);
+  let [progWidth, setProgWidth] = useState(0);
+
+
 const updateView = (lbl)=>{
   switch (lbl) {
     case "login":
@@ -87,10 +92,28 @@ const updateView = (lbl)=>{
     } 
   };
 
+  function move (){
+    setState(true);
+    let i = 1;
+    let elem = document.getElementById("myBar");
+    let width = 2;
+    let id = setInterval(frame, 200);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        setState(false)
+        i = 0;
+      } else {
+        width++;
+        setProgWidth(width);
+      }
+    }
+  }
+
   return (
     <>
     { step === 0 ?
-      <div className="App">
+      <div className={`App base ${state ? "disable-area" : ""}`}>
      <button className="addScreen" onClick={()=>setScreen(screen+1)}>Add New Screen</button>
      <div className="vl"><label className="paddingleft">Screen 1</label></div>
      {screen > 0 && <div className="v2"><label className="paddingleft">Screen 2</label></div>}
@@ -212,14 +235,20 @@ const updateView = (lbl)=>{
         <Weather expanded={weather.exp}></Weather>
         </div>
       </Draggable>
-      <button className="export">Export App</button>
-      {/* <button className="flow1" onClick={()=>setStep(1)}>Start Login Flow</button>
-      <button className="home-flow" onClick={()=>setStep(2)}>Start Home Flow</button> */}
+      <button className="export" onClick={move}>Export App</button>
     </div>
       </div>
+      
       : step === 1 ? <DemoComp1 /> : step === 2 ? <DemoHomeComp /> : ""
     
     }
+    <div>
+    {state &&(
+     <div id="myProgress" className = 'progress-bar' onClick={move}>
+     <div id="myBar" style={{width: `${progWidth}%`}}>{progWidth}%</div>
+    </div>
+    )}
+    </div>
 
     </>
   );

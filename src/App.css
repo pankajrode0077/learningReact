@@ -99,7 +99,7 @@ button:hover {
   z-index: 1;
   top: 0;
   left: 2;
-  background-color: #111;
+  /* background-color: #111; */
   padding-top: 60px;
   padding-left:10px;
 }
@@ -230,4 +230,35 @@ button:hover {
   height: 30px;
   width: 60px;
   margin-left: 10px;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: blueviolet;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.progress-bar {
+  position: absolute !important;
+  width: 100% !important;
+  max-width: 21rem;
+  left: 38% !important;
+  top: 50% !important;
+}
+
+.base{
+  left: 0%; top: 0%;  position: absolute;
+}
+
+.disable-area{
+  pointer-events: none;
+  opacity: 0.4;
 }
