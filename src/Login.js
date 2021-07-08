@@ -28,6 +28,7 @@ function Login(props) {
         {props.expanded ?
             <div className="sidenavs ">
                 {token !== '' ? <div>LoggedIn Success</div> : <div className="outerLogin">
+                    <div className="main-login-container">
                     <img alt="loading" className="incontact-img" src={InContactImg}></img>
                     <img alt="loading" className="cxone-img" src={CxOneImg}></img>
                     <div className="innerLogin">
@@ -36,7 +37,7 @@ function Login(props) {
                     <div className="loginBtn" onClick={login}><button>Login</button><br></br>
                         <a href="void()">Forgot your password?</a><br></br>
                     </div>
-                </div></div>}
+                </div></div></div>}
                 {/* <img alt="loading"
                         height="450px"
                         width="250px"

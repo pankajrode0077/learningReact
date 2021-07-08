@@ -117,6 +117,8 @@ const updateView = (lbl)=>{
 
   return (
     <>
+    {/* <DemoComp1></DemoComp1> */}
+    {/* <DemoHomeComp></DemoHomeComp> */}
       {step === 0 ?
         <div className={`App base ${state ? "disable-area" : ""}`}>
           <button className="addScreen" onClick={() => setScreen(screen + 1)}>Add New Screen</button>

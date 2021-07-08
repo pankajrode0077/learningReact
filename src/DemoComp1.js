@@ -16,7 +16,7 @@ function DemoComp1() {
                     onClick={()=>setStep(3)}
                     height="500px"
                     width="70%"
-                    src={require('./assets/login/Login-2.png')}></img>
+                    src={require('./assets/dialpad/OBCall1.png')}></img>
             </div> :
             step === 3 ?
             <div >
@@ -24,7 +24,7 @@ function DemoComp1() {
                     onClick={()=>setStep(4)}
                     height="500px"
                     width="70%"
-                    src={require('./assets/login/Login-3.png')}></img>
+                    src={require('./assets/dialpad/OBCall2.png')}></img>
             </div> :
             step === 4 ?
             <div >
@@ -32,7 +32,7 @@ function DemoComp1() {
                     onClick={()=>setStep(5)}
                     height="500px"
                     width="70%"
-                    src={require('./assets/login/Login-4.png')}></img>
+                    src={require('./assets/dialpad/OBCall3.png')}></img>
             </div> :
             step === 5 ?
             <div >
@@ -40,7 +40,7 @@ function DemoComp1() {
                     onClick={()=>setStep(6)}
                     height="500px"
                     width="70%"
-                    src={require('./assets/login/Login-5.png')}></img>
+                    src={require('./assets/dialpad/OBCall4.png')}></img>
             </div>
             
             
