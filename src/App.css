@@ -164,6 +164,23 @@ button:hover {
   transition: 0.5s;
 }
 
+.dropdown{
+  z-index: 5;
+  position:fixed;
+  top:11%;
+  right:2%;
+  width:9%;
+  background-color:aliceblue;
+}
+ .dropdowns{
+  z-index: 5;
+  position:fixed;
+  top:18%;
+  right:2%;
+  width:9%;
+  background-color:aliceblue;
+ }
+
 .loginBtn button{
   padding: 4px;
   background-color: #007cbe;
@@ -193,6 +210,15 @@ button:hover {
   color:#000;
   font-size:17px;
   max-height:10px;
+}
+.thmTxt{
+  color:#000;
+  font-size:17px;
+  font-weight: bold;;
+  max-height:10px;
+  padding-left: 50px;
+  padding-right: 40px;
+  background-color: #007cbe;
 }
 
 .ipInput{
