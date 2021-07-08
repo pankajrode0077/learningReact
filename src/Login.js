@@ -32,9 +32,9 @@ function Login(props) {
                     <img alt="loading" className="incontact-img" src={InContactImg}></img>
                     <img alt="loading" className="cxone-img" src={CxOneImg}></img>
                     <div className="innerLogin">
-                    <label className="ipTxt"> UserName : </label><input className="ipInput" defaultValue="UserName"></input><br></br>
-                    <label className="ipTxt"> Password : </label><input type="password" defaultValue="Password" className="ipInput" ></input><br></br>
-                    <div className="loginBtn" onClick={login}><button>Login</button><br></br>
+                    <label className="ipTxt" contenteditable="true"> UserName : </label><input className="ipInput" defaultValue="UserName"></input><br></br>
+                    <label className="ipTxt" contenteditable="true"> Password : </label><input type="password" defaultValue="Password" className="ipInput" ></input><br></br>
+                    <div className="loginBtn" contenteditable="true" onClick={login}><button>Login</button><br></br>
                         <a href="void()">Forgot your password?</a><br></br>
                     </div>
                 </div></div></div>}
