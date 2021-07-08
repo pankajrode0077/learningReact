@@ -100,11 +100,16 @@ button:hover {
   top: 0;
   left: 2;
   /* background-color: #111; */
-  padding-top: 60px;
+  padding-top: 120px;
   padding-left:10px;
 }
 
 .addScreen{
+  z-index: 5;
+  position:fixed;
+  top:12%;
+}
+.importEnv{
   z-index: 5;
   position:fixed;
   top:2%;
@@ -292,4 +297,9 @@ button:hover {
 .progress-msg-position {
   position: relative;
   top: 2.7rem;
+}
+
+.upload{
+  max-width: 1px;
+  max-height: 1px;
 }

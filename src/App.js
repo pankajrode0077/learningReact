@@ -111,11 +111,17 @@ const updateView = (lbl)=>{
     }
   }
 
+  const callupload = ()=>{
+    document.getElementById('up').click();
+  }
+
   return (
     <>
       {step === 0 ?
         <div className={`App base ${state ? "disable-area" : ""}`}>
           <button className="addScreen" onClick={() => setScreen(screen + 1)}>Add New Screen</button>
+          <button className="importEnv" onClick={callupload}>Import Config File</button>
+          <input id="up" className="upload" type="file"></input>
           <div className="vl"><label className="paddingleft">Screen 1</label></div>
           {screen > 0 && <div className="v2"><label className="paddingleft">Screen 2</label></div>}
           {screen > 1 && <div className="v3"><label className="paddingleft">Screen 3</label></div>}
