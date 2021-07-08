@@ -243,7 +243,7 @@ const updateView = (lbl)=>{
               </div>
             </Draggable>
             <button className="export" onClick={move}>Export App</button>
-            <button className="dropdown" onClick={() => { setopenTheme(true) }} >Themes</button>
+            <button className="dropdown" onClick={() => { setopenTheme(openTheme?false :true) }} >Themes</button>
             <div className="dropdowns">
               {openTheme && <div id="myDropdown" class="dropdown-content">
                 <label className="darkTheme thmtxt" onClick={() => { setopenTheme(false) }}>Dark</label><br/>
