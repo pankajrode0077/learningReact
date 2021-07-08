@@ -216,14 +216,32 @@ button:hover {
   font-size:17px;
   max-height:10px;
 }
-.thmTxt{
+.lightTheme{
+  padding-right: 37px !important;
+  background-color: whitesmoke;
+}
+
+.darkTheme{
+  background-color:grey;
+}
+
+.orangeTheme {
+  padding-right: 20px !important;
+  background-color:rgb(235, 157, 13);
+}
+
+.blueTheme {
+  padding-right: 43px !important;
+  background-color:rgb(125, 60, 185);
+}
+
+.thmtxt{
   color:#000;
   font-size:17px;
   font-weight: bold;;
   max-height:10px;
   padding-left: 50px;
   padding-right: 40px;
-  background-color: #007cbe;
 }
 
 .ipInput{
@@ -231,7 +249,10 @@ button:hover {
   color: grey;
   font-size: 14px;
   font-style: italic;
-} 
+}
+
+
+
 
 .outerLogin {
   padding:40px;

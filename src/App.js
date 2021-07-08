@@ -246,8 +246,10 @@ const updateView = (lbl)=>{
             <button className="dropdown" onClick={() => { setopenTheme(true) }} >Themes</button>
             <div className="dropdowns">
               {openTheme && <div id="myDropdown" class="dropdown-content">
-                <label className="thmTxt" onClick={() => { setopenTheme(false) }}>Dark</label><br></br>
-                <label className="thmTxt" onClick={() => { setopenTheme(false) }}>Light</label>
+                <label className="darkTheme thmtxt" onClick={() => { setopenTheme(false) }}>Dark</label><br/>
+                <label className="lightTheme thmtxt" onClick={() => { setopenTheme(false) }}>Light</label><br/>
+                <label className="orangeTheme thmtxt" onClick={() => { setopenTheme(false) }}>Orange</label><br/>
+                <label className="blueTheme thmtxt" onClick={() => { setopenTheme(false) }}>Blue</label><br/>
               </div>}
             </div>
           </div>
