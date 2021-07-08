@@ -98,7 +98,8 @@ function DemoComp1() {
                                     <img alt="loading"
                                         onClick={() => {
                                             setSHLoad(true);
-                                            setTimeout(() => { setStep(6); setSHLoad(false); }, 1000)
+                                            setWidgt(false);
+                                            setTimeout(() => { setStep(6); setSHLoad(false);setWidgt(true); }, 1000)
                                         }}
                                         height="500px"
                                         width="300px"
@@ -114,7 +115,8 @@ function DemoComp1() {
                                         <img alt="loading"
                                             onClick={() => {
                                                 setSHLoad(true);
-                                                setTimeout(() => { setStep(8); setSHLoad(false); }, 1000)
+                                                setWidgt(false);
+                                                setTimeout(() => { setStep(8); setSHLoad(false);setWidgt(true); }, 1000)
                                             }}
                                             height="500px"
                                             width="300px"
@@ -129,7 +131,8 @@ function DemoComp1() {
                                             <img alt="loading"
                                                 onClick={() => {
                                                     setSHLoad(true);
-                                                    setTimeout(() => { setStep(6); setSHLoad(false); }, 1000)
+                                                    setWidgt(false);
+                                                    setTimeout(() => { setStep(6); setSHLoad(false);setWidgt(true); }, 1000)
                                                 }}
                                                 height="500px"
                                                 width="300px"
