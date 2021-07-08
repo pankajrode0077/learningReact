@@ -56,35 +56,45 @@ function DemoComp1() {
                 </div> :
                 step === 2 ?
                     <div style={{ display: "grid" }}>
-                        <img alt="loading" width="300px" src={AgentStatusImg}></img>
-                        <img alt="loading" className="side-menu" src={SideMenuImg}></img>
+                        <img alt="loading" width="336px" src={AgentStatusImg}></img>
+                        <div>
+                        <img alt="loading" height="500px" src={SideMenuImg}></img>
                         <img alt="loading"
                             onClick={() => setStep(3)}
                             height="500px"
                             width="300px"
                             src={require('./assets/dialpad/OBCall1.png')}></img>
+                        </div>
                     </div> :
                     step === 3 ?
                         <div style={{ display: "grid" }}>
-                            <img alt="loading" width="300px" src={AgentStatusImg}></img>
+                            <img alt="loading" width="336px" src={AgentStatusImg}></img>
+                            <div>
+                            <img alt="loading" height="500px" src={SideMenuImg}></img>
                             <img alt="loading"
                                 onClick={() => setStep(4)}
                                 height="500px"
                                 width="300px"
                                 src={require('./assets/dialpad/OBCall2.png')}></img>
+                            </div>
                         </div> :
                         step === 4 ?
                             <div style={{ display: "grid" }}>
-                                <img alt="loading" width="300px" src={AgentStatusImg}></img>
+                                <img alt="loading" width="336px" src={AgentStatusImg}></img>
+                                <div>
+                                <img alt="loading" height="500px" src={SideMenuImg}></img>
                                 <img alt="loading"
                                     onClick={() => setStep(5)}
                                     height="500px"
                                     width="300px"
                                     src={require('./assets/dialpad/OBCall3.png')}></img>
+                                </div>
                             </div> :
                             step === 5 ?
                                 <div style={{ display: "grid" }}>
-                                    <img alt="loading" width="300px" src={AgentStatusImg}></img>
+                                    <img alt="loading" width="336px" src={AgentStatusImg}></img>
+                                    <div>
+                                    <img alt="loading" height="500px" src={SideMenuImg}></img>
                                     <img alt="loading"
                                         onClick={() => {
                                             setSHLoad(true);
@@ -93,11 +103,14 @@ function DemoComp1() {
                                         height="500px"
                                         width="300px"
                                         src={require('./assets/dialpad/OBCall4.png')}></img>
+                                    </div>
                                 </div> :
 
                                 step === 6 ?
                                     <div style={{ display: "grid" }} >
-                                        <img alt="loading" width="300px" src={AgentStatusImg}></img>
+                                        <img alt="loading" width="336px" src={AgentStatusImg}></img>
+                                        <div>
+                                        <img alt="loading" height="500px" src={SideMenuImg}></img>
                                         <img alt="loading"
                                             onClick={() => {
                                                 setSHLoad(true);
@@ -106,10 +119,13 @@ function DemoComp1() {
                                             height="500px"
                                             width="300px"
                                             src={require('./assets/dialpad/OBCall5.png')}></img>
+                                        </div>
                                     </div> :
                                     step === 8 ?
                                         <div style={{ display: "grid" }} >
-                                            <img alt="loading" width="300px" src={AgentStatusImg}></img>
+                                            <img alt="loading" width="336px" src={AgentStatusImg}></img>
+                                            <div>
+                                            <img alt="loading" height="500px" src={SideMenuImg}></img>
                                             <img alt="loading"
                                                 onClick={() => {
                                                     setSHLoad(true);
@@ -118,6 +134,7 @@ function DemoComp1() {
                                                 height="500px"
                                                 width="300px"
                                                 src={AgentDispImg}></img>
+                                            </div>
                                         </div> :
                                         ""
 
