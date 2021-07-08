@@ -4,6 +4,7 @@ import Login from "./Login";
 import AgentStatusImg from '../src/assets/Home/AgentStatus.png';
 import AgentDispImg from '../src/assets/dialpad/dispo.png';
 import StickyNotes from "./StickyNotes";
+import SideMenuImg from '../src/assets/Home/SideMenu.PNG';
 
 function DemoComp1() {
     const [step, setStep] = useState(1);
@@ -43,11 +44,13 @@ function DemoComp1() {
             :
             step === 1 ?
                 <div >
-                    <Login expanded={true} changestep={() => setStep(2)}></Login>
+                    <Login expanded={true} changestep={() => { setSHLoad(true);
+                setTimeout(() => { setStep(2); setSHLoad(false); }, 1000)}}></Login>
                 </div> :
                 step === 2 ?
                     <div style={{ display: "grid" }}>
                         <img alt="loading" width="300px" src={AgentStatusImg}></img>
+                        <img alt="loading" className="side-menu"  src={SideMenuImg}></img>
                         <img alt="loading"
                             onClick={() => setStep(3)}
                             height="500px"

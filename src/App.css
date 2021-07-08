@@ -169,7 +169,8 @@ button:hover {
 }
 
 .sidenavs {
-  position: fixed;
+  /* tobe uncommented for dragdrop */
+  /* position: fixed; */
   z-index: 1;
   background-color: #282c34;
   transition: 0.5s;
