@@ -5,6 +5,7 @@ import AgentStatusImg from '../src/assets/Home/AgentStatus.png';
 import AgentDispImg from '../src/assets/dialpad/dispo.png';
 import StickyNotes from "./StickyNotes";
 import SideMenuImg from '../src/assets/Home/SideMenu.PNG';
+import Weather from './Weather';
 
 function DemoComp1() {
     const [step, setStep] = useState(1);
@@ -38,6 +39,7 @@ function DemoComp1() {
         <input style={{ border: "none", "font-size": "5px " }} onKeyPress={keypressed}></input>
         {widgt &&  <div style={{ display: "grid" }} >
              <StickyNotes expanded={true}></StickyNotes>
+             <Weather expanded={true}></Weather>
           </div> }
         {shLoad === true ?
             <div>
