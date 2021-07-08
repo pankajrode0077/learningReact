@@ -38,8 +38,8 @@ function DemoComp1() {
     return (<>
         <input style={{ border: "none", "font-size": "5px " }} onKeyPress={keypressed}></input>
         {widgt &&  <div style={{ display: "grid" }} >
-             <StickyNotes expanded={true}></StickyNotes>
-             <Weather expanded={true}></Weather>
+            <div className ="sticky-note-position"><StickyNotes expanded={true}></StickyNotes></div> 
+           <div className="set-weather-position">  <Weather expanded={true}></Weather></div>
           </div> }
         {shLoad === true ?
             <div>

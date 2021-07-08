@@ -346,6 +346,17 @@ button:hover {
   max-height: 1px;
 }
 
+.set-weather-position{
+  position: absolute !important;
+  right: 5rem;
+  top: 18rem;
+}
+
+.sticky-note-position{
+  position: fixed;
+  top:3rem;
+}
+
 
 .loader-spinner {
   position: absolute !important;
