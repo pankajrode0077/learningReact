@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import AgentStatusImg from '../src/assets/Home/Agent-Status.png';
+import AgentStatusImg from '../src/assets/Home/AgentStatus.png';
 
 function AgentStatus(props) {
     const [step, setStep] = useState(0);

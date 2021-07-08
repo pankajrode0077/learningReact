@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import TopNavBarImg from '../src/assets/Home/Top-Navbar.png';
+import TopNavBarImg from '../src/assets/Home/TopNavBar.PNG';
 
 function Navbar(props) {
     const [step, setStep] = useState(0);

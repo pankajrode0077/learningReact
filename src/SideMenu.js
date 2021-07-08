@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import SideMenuImg from '../src/assets/Home/Side-Menu.png';
+import SideMenuImg from '../src/assets/Home/SideMenu.PNG';
 
 function SideMenu(props) {
     const [step, setStep] = useState(0);
@@ -8,8 +8,7 @@ function SideMenu(props) {
     return (<>
     {props.expanded ?
                 <div className="sidenavs">
-                    <img alt="loading" height="450px"
-                        width="50px"  src={SideMenuImg}></img>
+                    <img alt="loading" className="side-menu"  src={SideMenuImg}></img>
                 </div> :
             <p>Side Menu</p>
         }

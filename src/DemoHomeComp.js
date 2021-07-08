@@ -11,7 +11,7 @@ function DemoHomeComp() {
                         onClick={()=>setStep(2)}
                         height="45px"
                         width="85%"
-                        src={require('./assets/Home/Top-Navbar.png')}></img>
+                        src={require('./assets/Home/TopNavBar.PNG')}></img>
                 </div> :
             step === 2 ?
             <div >
@@ -19,7 +19,7 @@ function DemoHomeComp() {
                     onClick={()=>setStep(3)}
                     height="500px"
                     width="90%"
-                    src={require('./assets/Home/Side-Menu.png')}></img>
+                    src={require('./assets/Home/SideMenu.PNG')}></img>
             </div> :
             step === 3 ?
             <div >
@@ -27,7 +27,7 @@ function DemoHomeComp() {
                     onClick={()=>setStep(4)}
                     height="45px"
                     width="85%"
-                    src={require('./assets/Home/Agent-Status.png')}></img>
+                    src={require('./assets/Home/AgentStatus.png')}></img>
             </div> :
             step === 4 ?
             <div >

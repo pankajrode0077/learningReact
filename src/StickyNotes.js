@@ -6,9 +6,7 @@ function StickyNotes(props) {
     return (<>
                 {props.expanded ?
                         <div className="sidenavs">
-                            <img alt="sticky notes"
-                                height="200px"
-                                width="250px"
+                            <img alt="sticky notes" className="sticky-note"
                                 src={stickyNotes}>
                             </img>
                         </div> : <p>Sticky Notes</p>
