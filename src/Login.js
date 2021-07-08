@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import InContactImg from '../src/assets/login/inContact.PNG';
-import CxOneImg from '../src/assets/login/CxOne.PNG';
+import CxOneImg from '../src/assets/login/CxOne.png';
 
 function Login(props) {
     const [token, setToken] = useState('');

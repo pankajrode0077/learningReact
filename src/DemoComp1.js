@@ -41,6 +41,14 @@ function DemoComp1() {
                     height="500px"
                     width="70%"
                     src={require('./assets/dialpad/OBCall4.png')}></img>
+            </div> :
+            step === 6 ?
+            <div >
+                <img alt="loading"
+                    onClick={()=>setStep(7)}
+                    height="500px"
+                    width="70%"
+                    src={require('./assets/dialpad/OBCall5.png')}></img>
             </div>
             
             
