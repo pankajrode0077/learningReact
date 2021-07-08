@@ -244,9 +244,13 @@ const updateView = (lbl)=>{
     }
     <div>
     {state &&(
+      <>
      <div id="myProgress" className = 'progress-bar' onClick={move}>
-     <div id="myBar" style={{width: `${progWidth}%`}}>{progWidth}%</div>
+     <div id="myBar" style={{width: `${progWidth}%`}}>{progWidth}%
+     </div>
     </div>
+    <span className="progress-msg-position"> Exporting project...</span>
+    </>
     )}
     </div>
 

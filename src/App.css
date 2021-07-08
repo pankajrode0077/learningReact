@@ -262,3 +262,8 @@ button:hover {
   pointer-events: none;
   opacity: 0.4;
 }
+
+.progress-msg-position {
+  position: relative;
+  top: 2.7rem;
+}
