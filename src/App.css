@@ -32,7 +32,7 @@ body {
   transform: translate(-50%, -50%);
 }
 input {
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 5px 5px 5px;
   color: white;
   font-size: 1.3em;
   background-color: transparent;
@@ -197,8 +197,9 @@ button:hover {
   background-color: #007cbe;
   color: #ffff;
   font-size: 13px;
-  width: 100%;
-  border-radius: 4px;
+  width: 91%;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 .loginBtn  a{
@@ -258,18 +259,19 @@ button:hover {
 }
 
 .main-login-container {
-  padding-top: 33%;
+  padding-top: 30%;
 }
 
 
 .outerLogin {
   padding:40px;
-  background-color: #298fd8;
-  height: 370px;
+  background-color: #0099d6;
+  height: 371px;
   width: 78%;
 }
 
-.innerLogin{  
+.innerLogin{
+  margin-top: 10px;
   padding: 15px;
   background-color: #ffffff;
   box-shadow: 0 0px 4px 1px #000;
