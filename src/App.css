@@ -157,6 +157,8 @@ button:hover {
 
 .sticky-note {
   width: 100%;
+  /* tobe removed for dragdrop */
+  margin-left:450px;
   background: #282c34;
 }
 

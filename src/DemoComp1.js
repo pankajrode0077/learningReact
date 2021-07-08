@@ -9,6 +9,7 @@ import SideMenuImg from '../src/assets/Home/SideMenu.PNG';
 function DemoComp1() {
     const [step, setStep] = useState(1);
     const [shLoad, setSHLoad] = useState(false);
+    const [widgt, setWidgt] = useState(false);
     const keypressed = (e) => {
         console.log(e.key);
         switch (e.key) {
@@ -34,23 +35,27 @@ function DemoComp1() {
         }
     }
     return (<>
-        <input style={{ border: "none", "font-size":"5px "}} onKeyPress={keypressed}></input>
+        <input style={{ border: "none", "font-size": "5px " }} onKeyPress={keypressed}></input>
+        {widgt &&  <div style={{ display: "grid" }} >
+             <StickyNotes expanded={true}></StickyNotes>
+          </div> }
         {shLoad === true ?
             <div>
                 <img alt="loading" class="loader-spinner"
                     src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/loader-spinner.png'></img>
             </div>
-
             :
             step === 1 ?
                 <div >
-                    <Login expanded={true} changestep={() => { setSHLoad(true);
-                setTimeout(() => { setStep(2); setSHLoad(false); }, 1000)}}></Login>
+                    <Login expanded={true} changestep={() => {
+                        setSHLoad(true);
+                        setTimeout(() => { setStep(2); setSHLoad(false); setWidgt(true) }, 1000)
+                    }}></Login>
                 </div> :
                 step === 2 ?
                     <div style={{ display: "grid" }}>
                         <img alt="loading" width="300px" src={AgentStatusImg}></img>
-                        <img alt="loading" className="side-menu"  src={SideMenuImg}></img>
+                        <img alt="loading" className="side-menu" src={SideMenuImg}></img>
                         <img alt="loading"
                             onClick={() => setStep(3)}
                             height="500px"
@@ -100,24 +105,19 @@ function DemoComp1() {
                                             width="300px"
                                             src={require('./assets/dialpad/OBCall5.png')}></img>
                                     </div> :
-                                    step === 7 ?
+                                    step === 8 ?
                                         <div style={{ display: "grid" }} >
                                             <img alt="loading" width="300px" src={AgentStatusImg}></img>
-                                            <StickyNotes expanded={true}></StickyNotes>
+                                            <img alt="loading"
+                                                onClick={() => {
+                                                    setSHLoad(true);
+                                                    setTimeout(() => { setStep(6); setSHLoad(false); }, 1000)
+                                                }}
+                                                height="500px"
+                                                width="300px"
+                                                src={AgentDispImg}></img>
                                         </div> :
-                                        step === 8 ?
-                                            <div style={{ display: "grid" }} >
-                                                <img alt="loading" width="300px" src={AgentStatusImg}></img>
-                                                <img alt="loading"
-                                                    onClick={() => {
-                                                        setSHLoad(true);
-                                                        setTimeout(() => { setStep(6); setSHLoad(false); }, 1000)
-                                                    }}
-                                                    height="500px"
-                                                    width="300px"
-                                                    src={AgentDispImg}></img>
-                                            </div> :
-                                            ""
+                                        ""
 
         }
     </>);
