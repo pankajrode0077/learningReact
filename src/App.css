@@ -260,6 +260,7 @@ button:hover {
   color: grey;
   font-size: 14px;
   font-style: italic;
+  width: 90%;
 }
 
 .main-login-container {
