@@ -192,22 +192,6 @@ const updateView = (lbl)=>{
                 <SideMenu expanded={sidemenu.exp}></SideMenu>
               </div>
             </Draggable>
-            {dialpad.disp && <p>DialPad </p>}
-            <Draggable
-              key="5"
-              defaultClassName="limitWidth"
-              defaultPosition={dialpad.pos}
-              onStop={(e, data) => {
-                updatePos(data, 1, { type: 'dialpad' });
-              }}
-              onStart={() => {
-                updateView('dialpad');
-              }}
-            >
-              <div>
-                <Dialpad expanded={dialpad.exp}></Dialpad>
-              </div>
-            </Draggable>
             {stickyNotes.disp && <p>Sticky Notes </p>}
             <Draggable
               key="6"
@@ -228,6 +212,22 @@ const updateView = (lbl)=>{
             <p>Email </p>
             <p>SMS </p>
             <p>Commitments </p>
+            {dialpad.disp && <p>DialPad </p>}
+            <Draggable
+              key="5"
+              defaultClassName="limitWidth"
+              defaultPosition={dialpad.pos}
+              onStop={(e, data) => {
+                updatePos(data, 1, { type: 'dialpad' });
+              }}
+              onStart={() => {
+                updateView('dialpad');
+              }}
+            >
+              <div>
+                <Dialpad expanded={dialpad.exp}></Dialpad>
+              </div>
+            </Draggable>
             {weather.disp && <p>Weather Widget</p>}
             <Draggable
               key="7"
@@ -273,6 +273,7 @@ const updateView = (lbl)=>{
       </div>
 
     </>
+  
   );
 }
 
