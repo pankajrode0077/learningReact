@@ -6,20 +6,23 @@ import CxOneImg from '../src/assets/login/CxOne.PNG';
 function Login(props) {
     const [token, setToken] = useState('');
     const login = () => {
-        fetch('https://na1.staging.nice-incontact.com/public/authentication/v1/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ "email": "dhana@so32naia.com", "password": "Password1", "getUserDetails": false }),
-        }).then(response => response.json())
-            .then(data => {
-                setToken(data.token);
-                console.log('Success:', data);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+        setTimeout(()=>{props.changestep();
+            setToken('');
+        },1000)
+        // fetch('https://na1.staging.nice-incontact.com/public/authentication/v1/login', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({ "email": "dhana@so32naia.com", "password": "Password1", "getUserDetails": false }),
+        // }).then(response => response.json())
+        //     .then(data => {
+        //         setToken(data.token);
+        //         console.log('Success:', data);
+        //     })
+        //     .catch((error) => {
+        //         console.error('Error:', error);
+        //     });
     }
     return (<>
         {props.expanded ?

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./App.css";
-
+import Login from "./Login";
 
 function DemoComp1() {
     const [step, setStep] = useState(1);
@@ -8,11 +8,7 @@ function DemoComp1() {
         {
             step === 1 ?
                 <div >
-                    <img alt="loading"
-                        onClick={()=>setStep(2)}
-                        height="500px"
-                        width="70%"
-                        src={require('./assets/login/Login-1.png')}></img>
+                    <Login expanded={true} changestep={()=>setStep(2)}></Login>
                 </div> :
             step === 2 ?
             <div >
